@@ -1,45 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 :root{
     --font-color-clara:#dbdbdb;
     --color-1:#010326;
-    --color-2:#3C3E73;
-    --color-3:#6376AE;
-    --color-4:#54E0FF;
+
+    --color-2:#090C3A;
+    --color-3:#131649;
+    --color-4:#25d1f0;
     --color-5:#F363B4;
+    --color-5-shadow:#7c2263;
+    --color-6:#3C3E73;
+    --color-7:#14163C;
 }
 .pd-geral{
-    padding-left: 15%;
-    padding-right: 15%;
+    padding: 150px 15% 200px 15%;
+    
 }
-/*HEADER*/
+/*HEADER nav*/
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:var(--color-1);  
     padding: 20px 15%;
 
 }
 .navLinks li{
     display: inline-block;
     padding: 0px 10px;
+    text-transform: uppercase;
 }
 .navLinks li a{
     text-decoration: none;
     color:var(--font-color-clara);
     position: relative;
     font-size: 16px;
+    font-weight: 200;
+    transition:  0.5s ;
    
 }
+.navLinks li a:hover {
+    color:var(--color-5);
+    transition:  0.5s ;
+  }
 .navLinks li a:after {
     content: '';
     position: absolute;
     width: 100%;
-    height: 3px;
+    height: 2px;
     bottom: -7px;
     left: 0px;
     transform: scaleX(0);
-    background: var(--font-color-clara) ;
+    background: var(--color-5) ;
     transform-origin: bottom right;
     transition: transform 0.5s ease;
   }
@@ -47,13 +58,127 @@ header{
     transform: scaleX(1);
     transform-origin: bottom left;
   }
-
+  
 .logo{
     font-size: 30px;
+    cursor: pointer;
+    font-family: 'Press Start 2P';
     font-weight: 500;
     color: var(--font-color-clara);
+    transition:  0.8s ;
 }
+.logo:hover{
+    color: var(--color-5);
+    transition:  0.4s ;
+    text-shadow: -3px 3px 0 var(--color-5-shadow);;
+}
+
+/*Section banner*/
+
 .banner{
-    background-color: rgb(0, 219, 146);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 290px 0px 230px 0px;
+    background-image:linear-gradient(0deg, rgba(9,12,58,1) 0%, rgba(14,16,55,0.7) 76%, rgba(60,62,115,0.6) 100%), 
+                    url("../img/bannerGameDevelopment.jpeg") ; 
+    background-size: cover;
+    background-position: center;
+    color: var(--color-5);
+    margin-top: -70px;
+    text-align: center;
     
+}
+.banner h1{
+    font-family: 'Press Start 2P';
+    font-size: 45px;
+    font-weight: 500;
+    text-shadow:-3px 3px 0 var(--color-5-shadow);
+    padding-bottom: 150px;
+}
+.banner h2{
+    font-family: 'Press Start 2P';
+    font-size: 30px;
+    font-weight: 500;
+    text-shadow:-2px 2px 0 var(--color-5-shadow);
+    padding-bottom: 50px;
+}
+.contatoButton{
+    position: relative;
+    text-align: center;
+}
+.contatoButton a{
+    text-decoration: none;
+    z-index: 1;
+    cursor: pointer;
+    background-color: #0fd1eb;
+    border: none;
+    color: #010326;
+    font-size: 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    padding: 20px 65px;
+    position: relative;
+    box-shadow: inset 0 1px 0 #abf0ff, 0 10px 0 #0799b9;
+    
+}
+.contatoButton a:active{
+    top: 6px;
+    background-color: #0db4ca;
+    box-shadow: inset 0 1px 0 #abf0ff, 0 4px 0 #0799b9;
+}
+.contatoButton::after{
+    content: " ";
+    height: 68px;
+    width: 100%;
+    padding: 4px;
+    position: absolute;
+    bottom: -35px;
+    left: -4px;
+    z-index: 0;
+    background-color: #b8bcbd;
+    border-radius: 4px;
+}
+
+/*Section Titles*/
+h1.titleSection{
+    text-align: center;
+    font-family: 'Press Start 2P';
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--color-5);
+    text-shadow:-3px 3px 0 var(--color-5-shadow);
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+h3.descriptionTitle{
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+    color: #dbdbdb;
+}
+/*Section Nossos_Servicos*/
+#Nossos_Servicos{
+    background-color: var(--color-2);
+}
+/*Section portifolios*/
+#portifolios{
+    background-color: var(--color-3);
+}
+/*Section sobre*/
+#sobre{
+    background-color: var(--color-2);
+}
+/*Section time*/
+#time{
+    background-color: var(--color-3);
+}
+/*Section clientes*/
+#clientes{
+    background-color: var(--color-2);
+}
+/*Section contato*/
+#contato{
+    background-color: var(--color-3);
 }
