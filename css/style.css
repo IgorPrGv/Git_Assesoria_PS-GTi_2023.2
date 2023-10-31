@@ -118,7 +118,7 @@ header{
     font-size: 25px;
     border-radius: 5px;
     font-weight: 600;
-    padding: 20px 65px;
+    padding: 20px 40px;
     position: relative;
     box-shadow: inset 0 1px 0 #abf0ff, 0 10px 0 #0799b9;
     
@@ -140,7 +140,9 @@ header{
     background-color: #b8bcbd;
     border-radius: 4px;
 }
-
+.contatoButton a i{
+    padding-left: 25px;
+}
 /*Section Titles*/
 h1.titleSection{
     text-align: center;
@@ -219,9 +221,7 @@ h3.descriptionTitle{
     gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
 }
-.divImgPort{
-   
-}
+
 .imgPort{
     width: 100%;
     border-radius:  5px 5px 0px 0px;
@@ -282,10 +282,26 @@ h3.descriptionTitle{
 /*Section clientes*/
 #clientes{
     background-color: var(--color-2);
+    padding: 25px 15% 25px 15%;
+    
+
 }
 /*Section contato*/
 #contato{
     background-color: var(--color-3);
+}
+.divClientes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(min(100% , 150px),1fr));
+    justify-items: center;
+    align-items: center;
+}
+.divClientes div img{
+    width: 80%;
+}
+.divClientes div{
+    display: flex;
+    justify-content: center;
 }
 /*Footer*/
 .footer{
