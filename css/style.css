@@ -332,8 +332,9 @@ a i {
     transition: all 0.3s linear;
 }
 
-a:hover i {
+.redesMembro a:hover i {
     transform: scale(1.5);
+    cursor: pointer;
 }
 
 .facebook:hover {
@@ -370,7 +371,9 @@ a:hover i {
 #contato{
     background-color: var(--color-3);
 }
-
+.formContato{
+    background-color: #000;
+}
 /*Footer*/
 .footer{
     background-color: var(--color-2);
