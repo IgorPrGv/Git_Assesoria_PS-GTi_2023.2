@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root{
     --font-color-clara:#dbdbdb;
+    --font-color-clara-shadow:#919191;
     --color-1:#121330;
-
     --color-2:#090C3A;
     --color-3:#131649;
     --color-4:#25d1f0;
@@ -270,10 +270,93 @@ h3.descriptionTitle{
     color: var(--font-color-clara);
     font-size: 14px;
     padding: 10px 10px 20px 10px;
+    line-height: 1.2rem;
 }
 /*Section sobre*/
 #sobre{
     background-color: var(--color-2);
+
+}
+
+.timeline{
+    position: relative;
+    max-width:100%;
+    margin: 0px auto;
+
+}
+.containerTimeline{
+    position: relative;
+    padding: 10px 50px;
+    width: 50%;
+    box-sizing: border-box ;
+}
+.divText h1{
+    color: var(--color-5);
+    font-family: 'Press Start 2P';
+    font-size: 1.5rem;
+    text-shadow:-3px 3px 0 var(--color-5-shadow);
+    line-height: 2rem;
+
+}
+.divText p{
+    color: var(--font-color-clara);
+    font-size: 0.9rem;
+    padding-top: 10px;
+    line-height: 1.2rem;
+}
+.divText{
+    padding: 20px 30px;
+    background-color: var(--color-6);
+    border-radius: 6px;
+}
+.left-container{
+    left: 0;
+}
+.right-container{
+    left: 50%;
+}
+.containerTimeline img{
+    position: absolute;
+    width: 40px;
+    right: -20px;    
+    top:32px;
+    z-index: 10;
+}
+.right-container img{
+    left: -20px;
+}
+.timeline::after{
+    content:' ';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background-color: var(--color-6);
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: 1;
+}
+.left-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 38px;
+    z-index: 1;
+    border-top:15px solid transparent;
+    border-bottom:15px solid transparent;
+    border-left:15px solid var(--color-6);
+    right: 35px;
+}
+.right-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 38px;
+    z-index: 1;
+    border-top:15px solid transparent;
+    border-bottom:15px solid transparent;
+    border-right:15px solid var(--color-6);
+    left: 35px;
 }
 /*Section time*/
 #time{
@@ -299,9 +382,7 @@ h3.descriptionTitle{
     padding: 30px 0px ;
     border-radius: 15px;
 }
-@media (min-width: 700px) {
 
-  }
 
 .fotoMembro{
     width: 80%;
