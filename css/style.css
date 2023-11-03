@@ -18,23 +18,36 @@
 }
 /*HEADER nav*/
 header{
+    border-bottom: 1px solid var(--font-color-clara);
+    background-color: #25d2f015;
+    position: fixed;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-around ;
     align-items: center;
-    padding: 20px 15%;
+    flex-wrap: wrap;
+    gap: 15%;
+    padding: 20px 0%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(15px) ;
+    z-index: 999;
 
 }
+.navLinks{
+    display: flex;
+    gap: 1rem;
+}
 .navLinks li{
-    display: inline-block;
-    padding: 0px 10px;
+    display: inline;
     text-transform: uppercase;
 }
 .navLinks li a{
     text-decoration: none;
     color:var(--font-color-clara);
     position: relative;
-    font-size: 16px;
-    font-weight: 200;
+    font-size: 0.8rem;
+    font-weight: 500;
     transition:  0.5s ;
    
 }
@@ -60,7 +73,8 @@ header{
   }
   
 .logo{
-    font-size: 30px;
+    text-decoration: none;
+    font-size: 1.5rem;
     cursor: pointer;
     font-family: 'Press Start 2P';
     font-weight: 500;
@@ -80,26 +94,26 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 290px 0px 230px 0px;
+    padding: 280px 0px 220px 0px;
     background-image:linear-gradient(0deg, rgba(9,12,58,1) 0%, rgba(14,16,55,0.7) 76%, rgba(60,62,115,0.6) 100%), 
                     url("../img/bannerGameDevelopment.jpeg") ; 
     background-size: cover;
     background-position: center;
     color: var(--color-5);
-    margin-top: -70px;
+
     text-align: center;
     
 }
 .banner h1{
     font-family: 'Press Start 2P';
-    font-size: 45px;
+    font-size: 2.5rem;
     font-weight: 500;
     text-shadow:-3px 3px 0 var(--color-5-shadow);
     padding-bottom: 150px;
 }
 .banner h2{
     font-family: 'Press Start 2P';
-    font-size: 30px;
+    font-size: 1.5rem;
     font-weight: 500;
     text-shadow:-2px 2px 0 var(--color-5-shadow);
     padding-bottom: 50px;
@@ -157,7 +171,7 @@ h1.titleSection{
 h3.descriptionTitle{
     text-align: center;
     font-style: italic;
-    font-size: 18px;
+    font-size: 1.1rem;
     color: #dbdbdb;
 }
 /*Section Nossos_Servicos*/
@@ -218,8 +232,9 @@ h3.descriptionTitle{
 .portifoliosGallery{
     padding-top: 50px;
     display: grid;
-    gap: 2rem;
+    gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+    justify-items: center;
 }
 
 .imgPort{
@@ -233,12 +248,13 @@ h3.descriptionTitle{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 7px solid #1e1e38
-    ;
+    border: 7px solid #1e1e38;
     border-radius: 5px;
     transition: 0.5s;
     gap: 10px;
     padding: 10px;
+    justify-items: center;
+    max-width: 80%;
     
 }
 
@@ -261,8 +277,8 @@ h3.descriptionTitle{
 }
 .cardPortifolio article h1{
     color: var(--color-1);
-    font-size: 20px;
-    padding: 10px;
+    font-size: 1.25rem;
+    padding: 0.8px;
     font-weight: 600;
 }
 .cardPortifolio article p{
@@ -281,7 +297,7 @@ h3.descriptionTitle{
 .timeline{
     position: relative;
     max-width:100%;
-    margin: 0px auto;
+    margin: 50px auto;
 
 }
 .containerTimeline{
@@ -293,7 +309,7 @@ h3.descriptionTitle{
 .divText h1{
     color: var(--color-5);
     font-family: 'Press Start 2P';
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-shadow:-3px 3px 0 var(--color-5-shadow);
     line-height: 2rem;
 
@@ -303,6 +319,7 @@ h3.descriptionTitle{
     font-size: 0.9rem;
     padding-top: 10px;
     line-height: 1.2rem;
+    text-align: justify;
 }
 .divText{
     padding: 20px 30px;
@@ -317,14 +334,22 @@ h3.descriptionTitle{
 }
 .containerTimeline img{
     position: absolute;
-    width: 40px;
-    right: -20px;    
+    width: 45px;
+    right: -22px;    
     top:32px;
     z-index: 10;
 }
 .right-container img{
-    left: -20px;
+    left: -23px;
 }
+.containerTimeline .last-ball{
+    position: absolute;
+    width: 45px;
+    right: -22px;    
+    top:0px;
+    z-index: 10;
+}
+
 .timeline::after{
     content:' ';
     position: absolute;
@@ -345,7 +370,7 @@ h3.descriptionTitle{
     border-top:15px solid transparent;
     border-bottom:15px solid transparent;
     border-left:15px solid var(--color-6);
-    right: 35px;
+    right: 36px;
 }
 .right-container-arrow{
     height: 0;
@@ -356,7 +381,34 @@ h3.descriptionTitle{
     border-top:15px solid transparent;
     border-bottom:15px solid transparent;
     border-right:15px solid var(--color-6);
-    left: 35px;
+    left: 36px;
+}
+@media screen and (max-width:1200px) {
+    .timeline::after{
+        left: 0px;
+    }
+    .containerTimeline{
+        width: 100%;
+        padding: 0px 20px 0px 50px;
+    }
+    .containerTimeline:nth-last-child(1){
+        display: none;
+    }
+    .divText{
+        margin: 20px 0px;
+    }
+    .right-container{
+        left: 0;
+    }
+    .left-container img, .right-container img , .last-ball{
+        left: -22px;
+    }
+    .left-container-arrow , .right-container-arrow{
+       border-right: 15px solid var(--color-6);
+       border-left: 0;
+       left: 35px; 
+
+    }
 }
 /*Section time*/
 #time{
@@ -582,7 +634,7 @@ a i {
     color: var(--color-4);
 }
 
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     /*Footer media query*/
     .footer{
         padding:20px 0px ;
@@ -593,3 +645,86 @@ a i {
         gap: 20px;
     }
   }
+  @media screen and (max-width: 1024px)  {
+    /*titulos e subtitulos*/
+    h1.titleSection{
+        font-size: 1.75rem;
+        
+    }
+    h3.descriptionTitle{
+        font-size: 1rem;
+    }
+    /* padding geral da pagina */
+    .pd-geral{
+        padding: 75px 15% 100px 15%;
+    }
+    /* banner */
+    .banner{
+        padding: 180px 10% 130px 10%;
+    }
+    .banner h1{
+        font-size: 2.25rem;
+        padding-bottom: 100px;
+    }
+    .banner h2{
+        font-size: 1.25rem;
+    }
+  }
+  @media screen and (max-width: 640px)  {
+    /*titulos e subtitulos*/
+    h1.titleSection{
+        font-size: 1.25rem;
+        
+    }
+    h3.descriptionTitle{
+        font-size: 0.8rem;
+    }
+    /* padding geral da pagina */
+    .pd-geral{
+        padding: 75px 15% 100px 15%;
+    }
+    /* banner */
+    .banner{
+        padding: 180px 10% 130px 10%;
+    }
+    .banner h1{
+        font-size: 1.8rem;
+        padding-bottom: 100px;
+    }
+    .banner h2{
+        font-size: 1rem;
+    }
+    /* header */
+    .logo{
+        margin-bottom: 10px;
+        font-size: 1.25rem;
+    }
+    .navLinks{
+        gap: 1rem;
+        
+    }
+    .navLinks li a{
+        font-size: 10px;
+    }
+    /*portifolio*/
+    .cardPortifolio article h1{
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    .cardPortifolio article p{
+        font-size: 0.7rem;
+        line-height: 1rem;
+    }
+    /* timeline */
+    .divText h1{
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+    
+    }
+    .divText p{
+        font-size: 0.8rem;
+        padding-top: 10px;
+        line-height: 1.2rem;
+    }
+  }
+
