@@ -325,8 +325,43 @@ h3.descriptionTitle{
 .left-container{
     left: 0;
 }
-.right-container{
+.right-container {
     left: 50%;
+
+}
+.left-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 38px;
+    z-index: 1;
+    border-top:15px solid transparent;
+    border-bottom:15px solid transparent;
+    border-left:15px solid var(--color-6);
+    right: -14px;
+}
+.right-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 38px;
+    z-index: 1;
+    border-top:15px solid transparent;
+    border-bottom:15px solid transparent;
+    border-right:15px solid var(--color-6);
+    left: -14px;
+}
+
+.right-container .divText {
+    animation: surgirR 1ms ease-in-out;
+    animation-timeline:view();
+    animation-range: cover 0% cover 40%;
+}
+
+.left-container .divText {
+    animation: surgirL 1ms ease-in-out;
+    animation-timeline:view();
+    animation-range: cover 0% cover 40%;
 }
 .containerTimeline img{
     position: absolute;
@@ -334,9 +369,16 @@ h3.descriptionTitle{
     right: -22px;    
     top:32px;
     z-index: 10;
+    animation: revelar 1ms ease-in-out both;
+    animation-timeline:view();
+    animation-range: cover 0% cover 40%;
 }
 .right-container img{
     left: -23px;
+    animation: revelar 1ms ease-in-out both;
+    animation-timeline:view();
+    animation-range: cover 0% cover 40%;
+
 }
 .containerTimeline .last-ball{
     position: absolute;
@@ -356,28 +398,57 @@ h3.descriptionTitle{
     left: 50%;
     margin-left: -3px;
     z-index: 1;
+    animation: prencher 1ms ease-in-out;
+    animation-timeline:view();
 }
-.left-container-arrow{
-    height: 0;
-    width: 0;
-    position: absolute;
-    top: 38px;
-    z-index: 1;
-    border-top:15px solid transparent;
-    border-bottom:15px solid transparent;
-    border-left:15px solid var(--color-6);
-    right: 36px;
+
+
+@keyframes surgirL {
+    from{
+        opacity: 0;
+        translate:-100vw 0;
+    }
+    to{
+        opacity: 1;
+        translate: 0 0;
+    }
 }
-.right-container-arrow{
-    height: 0;
-    width: 0;
-    position: absolute;
-    top: 38px;
-    z-index: 1;
-    border-top:15px solid transparent;
-    border-bottom:15px solid transparent;
-    border-right:15px solid var(--color-6);
-    left: 36px;
+@keyframes surgirR {
+    from{
+        opacity: 0;
+        translate: 100vw 0;
+    }
+    to{
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+@keyframes prencher {
+    0%{
+        height: 0%;
+    }
+    20%{
+        height: 25% ;
+    }
+    40%{
+        height: 50%;
+    }
+    50%{
+        height: 75%;
+    }
+    60%{
+        height: 100%;
+    }
+}
+@keyframes revelar {
+    from{
+        opacity: 0;
+        clip-path: inset(100% 100% 100% 100%);
+    }
+    to{
+        opacity: 1;
+        clip-path: inset(0% 0% 0% 0%);
+    }
 }
 @media screen and (max-width:1200px) {
     .timeline::after{
@@ -402,7 +473,7 @@ h3.descriptionTitle{
     .left-container-arrow , .right-container-arrow{
        border-right: 15px solid var(--color-6);
        border-left: 0;
-       left: 35px; 
+       left: -14px; 
 
     }
 }
