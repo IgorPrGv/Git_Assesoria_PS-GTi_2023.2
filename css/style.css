@@ -18,9 +18,7 @@
 }
 /*HEADER nav*/
 header{
-    border-bottom: 1px solid var(--font-color-clara);
-    background-color: #25d2f015;
-    position: fixed;
+    position: absolute;
     display: flex;
     justify-content:space-around ;
     align-items: center;
@@ -30,8 +28,6 @@ header{
     width: 100%;
     top: 0;
     left: 0;
-    backdrop-filter: blur(15px) ;
-    z-index: 999;
 
 }
 .navLinks{
@@ -319,7 +315,7 @@ h3.descriptionTitle{
     font-size: 0.9rem;
     padding-top: 10px;
     line-height: 1.2rem;
-    text-align: justify;
+    text-align: left;
 }
 .divText{
     padding: 20px 30px;
