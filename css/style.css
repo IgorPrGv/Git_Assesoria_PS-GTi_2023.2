@@ -272,10 +272,12 @@ h3.descriptionTitle{
     border-radius:  0px 0px 5px 5px;
 }
 .cardPortifolio article h1{
-    color: var(--color-1);
-    font-size: 1.25rem;
-    padding: 0.8px;
+    color: var(--font-color-clara);
+    font-family: 'Press Start 2P';
+    font-size: 1rem;
+    padding-top: 0.8rem;
     font-weight: 600;
+    text-shadow:-2px 2px 0 var(--font-color-clara-shadow);
 }
 .cardPortifolio article p{
 
