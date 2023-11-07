@@ -1,0 +1,1 @@
+# Git_Assesoria_PS-GTi_2023.2
