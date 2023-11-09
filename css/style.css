@@ -44,7 +44,8 @@ header{
     position: relative;
     font-size: 0.8rem;
     font-weight: 500;
-    transition:  0.5s ;
+    font-family: 'Georgia', serif;
+    transition:  0.5s;
    
 }
 .navLinks li a:hover {
@@ -126,6 +127,7 @@ header{
     border: none;
     color: var(--color-1);
     font-size: 25px;
+    font-family: 'Georgia', serif;
     border-radius: 5px;
     font-weight: 600;
     padding: 20px 40px;
@@ -168,6 +170,7 @@ h3.descriptionTitle{
     text-align: center;
     font-style: italic;
     font-size: 1.1rem;
+    font-family: 'Georgia', serif;
     color: #dbdbdb;
 }
 /*Section Nossos_Servicos*/
@@ -201,6 +204,7 @@ h3.descriptionTitle{
     color: var(--font-color-clara);
     font-size: 16px;
     line-height: 20px;
+    font-family: 'Georgia', serif;
     
 }
 .imgServico{
@@ -285,6 +289,7 @@ h3.descriptionTitle{
     font-size: 14px;
     padding: 10px 10px 20px 10px;
     line-height: 1.2rem;
+    font-family: 'Georgia', serif;
 }
 /*Section sobre*/
 #sobre{
@@ -315,6 +320,7 @@ h3.descriptionTitle{
 .divText p{
     color: var(--font-color-clara);
     font-size: 0.9rem;
+    font-family: 'Georgia', serif;
     padding-top: 10px;
     line-height: 1.2rem;
     text-align: left;
@@ -595,7 +601,7 @@ a i {
     padding: 10px;
     font-size: 16px;
     color: var(--color-1);
-    font-family: 'Roboto Slab',serif;
+    font-family: 'Georgia', serif;
 }
 .inputs input:focus , .inputs textarea:focus{
     
@@ -604,11 +610,11 @@ a i {
 }
 
 .inputs input::placeholder{
-    font-family: 'Roboto Slab',serif;
+    font-family: 'Georgia', serif;
     color: var(--font-color-clara);
 }
 .inputs textarea::placeholder{
-    font-family: 'Roboto Slab',serif;
+    font-family: 'Georgia', serif;
     color: var(--font-color-clara);
 }
 .aMsg{
