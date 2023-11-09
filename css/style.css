@@ -194,18 +194,27 @@ h3.descriptionTitle{
     align-items: center;
     box-shadow: -7px 8px 0px 0px rgba(34,38,115,1);
 }
+.servico:hover{
+    scale: 1.1;
+    color: var(--color-5);
+    box-shadow: -7px 8px 0px 0px var(--color-5);
+}
 .servico h1{
     color: var(--color-1);
     font-size: 20px;
     font-weight: 800;
     padding-bottom: 20px;
 }
+.servico h1:hover{
+    transition: 0.5s;
+    scale: 1.1;
+    color: var(--color-5);
+}
 .servico p{
     color: var(--font-color-clara);
     font-size: 16px;
     line-height: 20px;
     font-family: 'Georgia', serif;
-    
 }
 .imgServico{
     background-color: var(--color-4);
