@@ -682,8 +682,6 @@ a i {
     display: flex;
     align-items: center;
     gap: 20px;
-
-    
 }
 .divRedesSociais a{
     padding: 5px;
@@ -698,7 +696,7 @@ a i {
     border-radius: 100%;
     transition: 0.9s;
 }
-.twiter, .linkedin, .instagram{
+.twiter, .linkedin, .instagram, .whatsapp{
     width: 30px;
     
 }
