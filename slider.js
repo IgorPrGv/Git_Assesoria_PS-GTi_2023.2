@@ -1,14 +1,12 @@
 let slides = document.querySelectorAll('.slide');
 let current = 0;
 
-function hideAllSlides() {
-    slides.forEach(slide => {
-        slide.style.display = 'none';
-    });
+function cls() {
+    slides.forEach(slide => {slide.style.display = 'none';});
 }
 
 function showSlide(index) {
-    hideAllSlides();
+    cls();
 
     if (index < 0) {
         current = slides.length - 1;
@@ -29,5 +27,5 @@ function prev() {
     showSlide(current - 1);
 }
 
-// Exiba a primeira slide ao carregar a página
+// Exiba a primeira slide ao carregar a pÃ¡gina
 showSlide(current);
