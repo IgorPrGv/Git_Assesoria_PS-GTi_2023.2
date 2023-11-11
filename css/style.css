@@ -168,6 +168,7 @@ header{
 .slide img {
     width: 100%;
     filter: brightness(50%);
+    object-fit: fill;
 }
 
 .arrow {
