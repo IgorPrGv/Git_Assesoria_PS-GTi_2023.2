@@ -11,10 +11,11 @@
     --color-5-shadow:#7c2263;
     --color-6:#3C3E73;
     --color-7:#14163C;
+    --blur: rgba(4, 9, 30, 0.801);
+    --transparent: rgba(234, 234, 234, 0.066);
 }
 .pd-geral{
     padding: 125px 15% 150px 15%;
-    
 }
 /*HEADER nav*/
 header{
@@ -85,41 +86,44 @@ header{
 }
 
 /*Section banner*/
-
-.banner{
+.banner {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 280px 0px 220px 0px;
-    background-image:linear-gradient(0deg, rgba(9,12,58,1) 0%, rgba(14,16,55,0.7) 76%, rgba(60,62,115,0.6) 100%), 
-                    url("../img/bannerGameDevelopment.jpeg") ; 
-    background-size: cover;
-    background-position: center;
-    color: var(--color-5);
-
     text-align: center;
-    
+    position: relative;
 }
-.banner h1{
+
+.introduction {
+    position: absolute;
+    text-align: center;
+}
+
+.banner h1 {
     font-family: 'Press Start 2P';
     font-size: 2.5rem;
     font-weight: 500;
-    text-shadow:-3px 3px 0 var(--color-5-shadow);
-    padding-bottom: 150px;
+    text-shadow: -3px 3px 0 var(--color-5-shadow);
+    padding-bottom: 100px;
+    color: var(--color-5);
 }
-.banner h2{
+
+.banner h2 {
     font-family: 'Press Start 2P';
     font-size: 1.5rem;
     font-weight: 500;
-    text-shadow:-2px 2px 0 var(--color-5-shadow);
+    text-shadow: -2px 2px 0 var(--color-5-shadow);
     padding-bottom: 50px;
+    color: var(--color-5);
 }
-.contatoButton{
+
+.contatoButton {
     position: relative;
     text-align: center;
+    margin-bottom: 50px;
 }
-.contatoButton a{
+
+.contatoButton a {
     text-decoration: none;
     z-index: 1;
     cursor: pointer;
@@ -133,28 +137,82 @@ header{
     padding: 20px 40px;
     position: relative;
     box-shadow: inset 0 1px 0 #abf0ff, 0 10px 0 #0799b9;
-    
 }
-.contatoButton a:active{
+
+.contatoButton a:active {
     top: 6px;
     background-color: #0db4ca;
     box-shadow: inset 0 1px 0 #abf0ff, 0 4px 0 #0799b9;
 }
-.contatoButton::after{
-    content: " ";
-    height: 68px;
-    width: 100%;
-    padding: 4px;
-    position: absolute;
-    bottom: -37px;
-    left: -4px;
-    z-index: 0;
-    background-color: #b8bcbd;
-    border-radius: 4px;
-}
-.contatoButton a i{
+
+.contatoButton a i {
     padding-left: 25px;
 }
+
+.container {
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    margin-bottom: -227px;
+}
+
+.slide {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    overflow: hidden;
+    margin-top: -20%;
+    margin-left: -20%;
+}
+
+.slide img {
+    width: 100%;
+    filter: brightness(50%);
+}
+
+.arrow {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    z-index: 100;
+    margin-bottom: 50px;
+}
+
+.arrow img {
+    width: 50px;
+}
+
+.arrowl{
+    margin-left: 20px;
+    padding-top: 5px;
+    background-color: var(--color-3);
+    border-radius: 20%;
+}
+.arrowr {
+    margin-right: 20px;
+    padding-top: 5px;
+    background-color: var(--color-3);
+    border-radius: 20%;
+}
+
+.arrow img {
+    width: 50px;
+}
+
+.arrowr:hover {
+    box-shadow: -5px 0px 0px var(--color-5);
+    transition: 0.3s;
+}
+
+.arrowl:hover {
+    box-shadow: 5px 0px 0px var(--color-5);
+    transition: 0.3s;
+}
+
+
 /*Section Titles*/
 h1.titleSection{
     text-align: center;
